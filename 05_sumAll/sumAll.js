@@ -1,6 +1,8 @@
 const sumAll = function (num1, num2) {
     if (!isNumber(num1) || !isNumber(num2)) return "ERROR";
+    if (!isInteger(num1) || !isInteger(num2)) return "ERROR";
     if (num1 < 0 || num2 < 0) return "ERROR";
+
 
     let sum = 0;
 
@@ -9,6 +11,10 @@ const sumAll = function (num1, num2) {
     }
 
     return sum;
+};
+
+const isInteger = function (num) {
+    return Math.round(num) === num;
 };
 
 const isNumber = function (num) {

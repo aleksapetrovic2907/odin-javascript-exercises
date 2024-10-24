@@ -1,4 +1,6 @@
-const repeatString = function(string, repeatCount) {
+const repeatString = function (string, repeatCount) {
+    if (repeatCount < 0) return "ERROR";
+
     let repeatedString = "";
 
     for (let i = 0; i < repeatCount; i++)

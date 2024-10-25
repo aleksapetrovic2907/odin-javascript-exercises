@@ -9,10 +9,10 @@ const palindromes = function (string) {
 
 // Removes spaces, symbols and sets everything to lowercase.
 function filterString(string) {
-    const isAlphabetRegex = /^[a-zA-Z]+$/;
+    const isAlphanumericalRegex = /^[a-zA-Z0-9]+$/;
 
     string = string.split('');
-    string = string.filter((ch) => isAlphabetRegex.test(ch)).join('');
+    string = string.filter((ch) => isAlphanumericalRegex.test(ch)).join('');
     return string.toLowerCase();
 }
 
